@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://caption"
+        class="com.company.cpf.web.forms.MyCustomForm"
+        messagesPack="com.company.cpf.web.forms">
+    <dialogMode height="300"
+                width="800"/>
+    <actions>
+        <action id="windowCommit"
+                caption="mainMsg://actions.Ok"
+                icon="icons/ok.png"
+                invoke="onWindowCommit"
+                shortcut="CTRL-ENTER"/>
+        <action id="windowClose"
+                caption="mainMsg://actions.Cancel"
+                icon="icons/cancel.png"
+                invoke="onWindowClose"
+                shortcut="ESCAPE"/>
+    </actions>
+
+    <layout spacing="true">
+        <hbox spacing="true">
+            <label value="msg://myField"/>
+            <textField id="myField" width="200px"/>
+        </hbox>
+        <hbox spacing="true">
+            <button id="okBtn"
+                    action="windowCommit"/>
+            <button id="cancelBtn"
+                    action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
